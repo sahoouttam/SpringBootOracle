@@ -33,7 +33,6 @@ public class TutorialController {
             List<Tutorial> tutorials = new ArrayList<>();
             if (title == null) {
                 tutorialRepository.findAll().forEach(tutorials::add);
-
             } else {
                 tutorialRepository.findByTitleContaining(title).forEach(tutorials::add);
             }
